@@ -1,0 +1,47 @@
+<%- include('baseLayout', { pageTitle: 'Employees | ' }) %>
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/employees.css">
+
+<main>
+  <h2>All Employees</h2>
+<table style="border-collapse: collapse">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Position</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% employees.forEach(employee => { %>
+    <tr>
+      <td><%= employee.id %></td>
+      <td><%= employee.name %></td>
+      <td><%= employee.email %></td>
+      <td><%= employee.position %></td>
+      <td>
+        <a href="/<%= employee.id %>/edit"
+          ><i class="fa-regular fa-pen-to-square"></i
+        ></a>
+        <form
+          action="/<%= employee.id %>/delete"
+          method="post"
+          style="display: inline"
+          onsubmit="return confirm('Are you sure you want to delete this employee?');"
+        >
+        <button style="display: none" type="submit" id="deleteButton">
+        </button>
+        <i style="margin-right:10px;color:#c41e1e;" class="fa-solid fa-trash" style="cursor: pointer" onclick="document.getElementById('deleteButton').click();"></i>
+      
+        </form>
+       
+      </td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>
+<a class="add-btn" href="/create">Add Employee</a>
+</main>

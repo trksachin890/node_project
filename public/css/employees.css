@@ -1,0 +1,52 @@
+h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    border: none;
+    padding: 10px;
+}
+
+th {
+    background-color: #1b48ea;
+    color: #fff;
+}
+
+button, .add-btn {
+    background-color: #1b48ea;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+.add-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    width: 120px;
+}
+
+
+button:hover, .add-btn:hover {
+    background-color: #1b48ea;
+}
+
+.fa-trash {
+    cursor: pointer;
+    margin-left: 4px;
+}
